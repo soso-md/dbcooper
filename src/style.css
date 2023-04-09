@@ -1,4 +1,33 @@
-:root {
+*{
+  margin: 0;
+}
+
+p{
+  font-size: 18pt;
+  color: white;
+  font-family: 'Roboto', sans-serif;
+  margin: 20px 0;
+  line-height: 130%;
+  max-width: 800px;
+}
+
+
+button.primary{
+  background-color: #BDFCFF00;
+  color: white;
+  border: 1px solid white;
+  padding: 15px 25px;
+  border-radius: 50px;
+  font-size: 18pt;
+  font-family: 'Roboto', sans-serif;
+  cursor: pointer;
+  transition: 0.3s;
+  margin: 20px 0;
+}
+button.primary:hover{
+  background-color: #BDFCFF80;
+}
+/* :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -86,4 +115,4 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
-}
+} */
