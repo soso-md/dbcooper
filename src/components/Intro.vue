@@ -1,9 +1,15 @@
 <script setup>
 
 window.addEventListener('scroll', () => {
-    const newspapers = document.getElementsByClass('newspaper');
+    const newspapers = document.getElementsByClassName('newspapers');
 
-    
+    if(window.pageYOffset > 520){
+        newspapers[0].style.paddingTop = `20px`;
+
+    }else{
+        newspapers[0].style.paddingTop = `800px`;
+    }
+
     // newspapers.forEach(newspaper => {
     //     const distance = window.pageYOffset * 0.1 * (newspaper.style.zIndex *-0.3);
     //     newspaper.style.transform = `translateY(${distance}px)`;
@@ -14,15 +20,16 @@ window.addEventListener('scroll', () => {
 
 <template>
     <section id="intro">
-        <div class="newspapers">
-            <img src="../assets/img/newspapers/newspaper1.jpeg" style="left:0px;" alt="" class="newspaper">
-            <img src="../assets/img/newspapers/newspaper2.webp" style="right:-40%;" alt="" class="newspaper">
-            <img src="../assets/img/newspapers/newspaper3.jpeg" style="left:0px;" alt="" class="newspaper">
+   <div class="newspapers">
+            <img v-motion-slide-visible-left src="../assets/img/newspapers/newspaper1.jpeg" style="left:0px;" alt="" class="newspaper">
+            <img v-motion-slide-visible-right src="../assets/img/newspapers/newspaper2.webp" style="right:-40%;" alt="" class="newspaper">
+            <img v-motion-slide-visible-left src="../assets/img/newspapers/newspaper3.jpeg" style="left:0px;" alt="" class="newspaper">
             <p>
                 Am 24. November 1971 entführte ein Mann namens D.B. Cooper ein Flugzeug von Portland nach Seattle und forderte 200.000 Dollar Lösegeld. Nachdem das Geld übergeben worden war, sprang er aus dem Flugzeug und wurde nie wieder gesehen. 
             </p>
-            <button class="primary">Entdecke jetzt seine Geschichte</button>
-        </div>
+            
+            <button class="primary" @click="$emit('isVisible', true)">Entdecke jetzt seine Geschichte</button>
+        </div> 
     </section>
 </template>
 
@@ -45,8 +52,11 @@ section#intro{
         width: 60%;
         right: 0px;
         border-radius: 8px;
-        margin-top: -30px
-        
+        margin-top: -200px
+    }
+
+    p{
+        margin-top: 90px;
     }
 }
 }

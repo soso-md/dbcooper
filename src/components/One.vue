@@ -1,6 +1,11 @@
 <template>
     <div>
-helloooo :3
+
+        <section id="start">
+                <span>HELLO
+                WELCOME</span>
+                <img src="../assets/img/newspapers/newspaper1.jpeg" alt="">
+        </section>
     </div>
 </template>
 
