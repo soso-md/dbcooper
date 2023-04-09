@@ -1,14 +1,12 @@
+<script setup>
+import Parallax from './components/Parallax.vue'
+</script>
+
 <template>
-  <HelloWorld msg="Hello Vue 3.0 + Vite" />
+  <div>
+    <Parallax/>
+  </div>
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld.vue'
-
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
-</script>
+<style scoped>
+</style>
