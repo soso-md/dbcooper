@@ -32,7 +32,11 @@ window.addEventListener('scroll', () => {
         newspaper.style.transform = `rotate(${degree}deg)`;
     })
 
-    news.style.marginTop = `calc(${window.pageYOffset * speed * (10 *-0.3)}px + 240px)`;
+    if(window.pageYOffset < 700){
+        news.style.marginTop = `calc(${window.pageYOffset * speed * (10 *-0.3)}px + 240px)`;
+    }else{
+        news.style.marginTop = `calc(${700 * speed * (10 *-0.3)}px + 240px)`;
+    }
 })
 </script>
 
