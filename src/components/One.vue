@@ -73,7 +73,7 @@ function pauseInterview(){
                 <button class="primary" v-if="isPlaying" @click="pauseInterview()">Stoppe das Interview mit Florence Shaffner</button>
                 
                 <div class="threat">
-                    <img src="../assets/img/dbcooper_note 1.png" alt="">
+                    <img src="../assets/img/dbcooper_note1.png" alt="">
                 </div>
 
                 <p>Er forderte 200.000 Dollar in 20$-Scheine, vier Fallschirme und einen Tankwagen, der das Flugzeug nach der Landung betanken sollte.</p>
