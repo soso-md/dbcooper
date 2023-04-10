@@ -6,7 +6,7 @@ import One from './components/One.vue'
 var isVisible = ref(false)
 
 function startStory(){
-  this.isVisible = true;
+  isVisible.value = true;
   setTimeout(() => {
     document.getElementById("start").scrollIntoView({ behavior: "smooth" })
   }, 100)
