@@ -22,7 +22,7 @@ button.primary{
   font-family: 'Roboto', sans-serif;
   cursor: pointer;
   transition: 0.3s;
-  margin: 20px 0;
+  margin: 20px auto;
 }
 button.primary:hover{
   background-color: #BDFCFF80;

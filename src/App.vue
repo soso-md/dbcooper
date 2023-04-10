@@ -15,9 +15,9 @@ function startStory(){
 </script>
 
 <template>
-    <Parallax/>
-    <Intro @isVisible="startStory()"/>
-    <!-- <One v-show="isVisible" /> -->
+    <Parallax @isVisible="startStory()"/>
+    <!-- <Intro @isVisible="startStory()"/> -->
+    <One v-show="isVisible" />
 </template>
 
 <style scoped>

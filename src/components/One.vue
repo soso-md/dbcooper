@@ -1,7 +1,7 @@
 <template>
     <div>
 
-        <section id="start">
+        <section id="start" style="z-index: 300 position: relative;">
                 <span>HELLO
                 WELCOME</span>
                 <img src="../assets/img/newspapers/newspaper1.jpeg" alt="">
