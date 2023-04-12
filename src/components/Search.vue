@@ -62,7 +62,7 @@ function toggleFinding(){
 
 <style lang="scss" >
 section.search{
-
+    background-color: $background;
     .map{
         position: relative;
         width: fit-content;
@@ -71,6 +71,9 @@ section.search{
         #map{
         width: 100%;
         height: 100%;
+        filter: grayscale(1) invert(1) sepia(0.2);
+
+        
         }
     
         #marker{
@@ -81,24 +84,38 @@ section.search{
             z-index: 5;
 
             .cls-3, .cls-2, .cls-1{
-                fill:#7ac943;
+                fill: $beige;
+                opacity: 0.7;
                 cursor: pointer;
-
-                &:hover{
-                    fill: #ff7bac;
-                }
             }
             .cls-4{stroke-dasharray:0 0 12.2 12.2;}
             .cls-4,.cls-5{
                 fill:none;
-                stroke:#7ac943;
+                stroke:$beige;
                 stroke-linecap:square;
                 stroke-miterlimit:10;
                 stroke-width:3px;
                 cursor: pointer;
+            }
+
+            &:hover + #map{
+            filter: grayscale(1) invert(1) sepia(0.2) brightness(0.7);
+            }
+
+            &:hover .cls-3, &:hover .cls-2{
+                fill:$bright;
 
                 &:hover{
-                    stroke: #ff7bac;
+                    fill: $hover-select;
+                }
+            }
+
+            &:hover .cls-4,&:hover .cls-5{
+               
+                stroke:$bright;
+
+                &:hover{
+                    stroke: $hover-select;
                 }
             }
         }

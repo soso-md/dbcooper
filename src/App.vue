@@ -6,7 +6,7 @@ import Search from './components/Search.vue'
 import Evidence from './components/Evidence.vue'
 import Suspects from './components/Suspects.vue'
 
-var isVisible = ref(false)
+var isVisible = ref(true)
 
 function startStory(){
   isVisible.value = true;
@@ -17,7 +17,7 @@ function startStory(){
 </script>
 
 <template>
-    <Parallax @isVisible="startStory()"/>
+    <!-- <Parallax @isVisible="startStory()"/> -->
     <One v-if="isVisible" />
     <Search v-if="isVisible" />
     <Evidence v-if="isVisible" />

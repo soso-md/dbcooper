@@ -5,5 +5,24 @@ import {MotionPlugin} from '@vueuse/motion'
 
 
 const app = createApp(App)
-app.use(MotionPlugin)
+
+app.use(MotionPlugin, {
+    directives: {
+      'fade-up': {  
+        initial: {
+            opacity: 0,
+            y: 50,
+        },
+        visible: {
+            opacity: 1,
+            y: 0,
+            transition: {
+                duration: 700,
+                delay: 100,
+            },
+        }
+      },
+    },
+  })
+  
 app.mount('#app')

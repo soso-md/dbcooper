@@ -64,10 +64,11 @@ window.addEventListener('scroll', () => {
                 <img src="../assets/img/newspapers/newspaper2.webp" style="right:-40%; transform: rotate(-12deg);" alt="" class="newspaper">
                 <img src="../assets/img/newspapers/newspaper3.jpeg" style="left:0px; transform: rotate(-3deg);" alt="" class="newspaper">
             </div>
-            <p>
-                Am 24. November 1971 entführte ein Mann namens D.B. Cooper ein Flugzeug von Portland nach Seattle und forderte 200.000 Dollar Lösegeld. Nachdem das Geld übergeben worden war, sprang er aus dem Flugzeug und wurde nie wieder gesehen. 
-            </p>
-            <button class="primary" @click="$emit('isVisible', true)">Entdecke jetzt seine Geschichte</button>
+                <p v-motion-fade-up>
+                    Am 24. November 1971 entführte ein Mann namens D.B. Cooper ein Flugzeug von Portland nach Seattle und forderte 200.000 Dollar Lösegeld. Nachdem das Geld übergeben worden war, sprang er aus dem Flugzeug und wurde nie wieder gesehen. 
+                </p>
+                <button style="margin-left: 30px;" v-motion-fade-up class="primary" @click="$emit('isVisible', true)">Entdecke jetzt seine Geschichte</button>
+
         </section>
 </template>
 
