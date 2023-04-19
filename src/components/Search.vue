@@ -20,44 +20,48 @@ function toggleFinding(){
     isFlying.value = false
     isFinding.value = !isFinding.value
 }
+
+// document.querySelector('.info-area').style.width = document.querySelector('.info-area').width + 'px'
+
 </script>
 
 <template>
     <div>
-        <section class="search container">
-            <h1>Die Suche</h1>
-            <div class="grid">
+        <section class="search">
+            <div class="container">
 
-                <div class="map">
-                    <svg id="marker" xmlns="http://www.w3.org/2000/svg" width="603" height="633" viewBox="0 0 603 633">
-                        <line @click="toggleFlying()" class="cls-5" x1="236.8" x2="238.2" y2="5.8"/>
-                        <path @click="toggleFlying()" class="cls-4" d="m241.1,17.6l36.9,151.4s8,29-6,58,10,94,19,100,14,15,14,22,8,32-9,46-41,25-46,32,16,63,9,84c-4.2,12.6-16.1,53.7-25,84.8"/>
-                        <path @click="toggleFlying()" class="cls-5" d="m232.3,601.7c-.6,2-1.1,3.9-1.6,5.8"/>
-                        <polygon @click="toggleFlying()" class="cls-1" points="224 599.3 223.4 633 240.7 604.1 224 599.3"/>
-                        <path @click="toggleLanding()" class="cls-3" d="m348,152c-9.2-10.6-25.6-9.2-35-6-21.1,7.3-26.2,31.2-27,35-1.1,5.4-5,23.4,4,31,13.2,11.1,51.3-2.4,61-28,.8-2,7.3-20.1-3-32Z"/>
-                        <circle @click="toggleFinding()" class="cls-2" cx="183.5" cy="353.5" r="6.5"/></svg>
-                        <img id="map" style="user-select: none;" src="../assets/img/map.png" alt="">
-                    </div>
-                    <div class="info-area">
-                        <div v-if="isLanding">
-                            Die Zone, wo DB Cooper hochstwahrscheinlich gelandet ist.
+                <h1>Die Suche</h1>
+                <div class="grid">
+                    
+                    <div class="map">
+                        <svg id="marker" xmlns="http://www.w3.org/2000/svg" width="603" height="633" viewBox="0 0 603 633">
+                            <line @click="toggleFlying()" :class="{selected: isFlying}" class="cls-5" x1="236.8" x2="238.2" y2="5.8"/>
+                            <path @click="toggleFlying()" :class="{selected: isFlying}" class="cls-4" d="m241.1,17.6l36.9,151.4s8,29-6,58,10,94,19,100,14,15,14,22,8,32-9,46-41,25-46,32,16,63,9,84c-4.2,12.6-16.1,53.7-25,84.8"/>
+                            <path @click="toggleFlying()" :class="{selected: isFlying}" class="cls-5" d="m232.3,601.7c-.6,2-1.1,3.9-1.6,5.8"/>
+                            <polygon @click="toggleFlying()" :class="{selected: isFlying}" class="cls-1" points="224 599.3 223.4 633 240.7 604.1 224 599.3"/>
+                            <path @click="toggleLanding()" :class="{selected: isLanding}" class="cls-3" d="m348,152c-9.2-10.6-25.6-9.2-35-6-21.1,7.3-26.2,31.2-27,35-1.1,5.4-5,23.4,4,31,13.2,11.1,51.3-2.4,61-28,.8-2,7.3-20.1-3-32Z"/>
+                            <circle @click="toggleFinding()" :class="{selected: isFinding}" class="cls-2" cx="183.5" cy="353.5" r="6.5"/></svg>
+                            <img id="map" style="user-select: none;" src="../assets/img/map.png" alt="">
                         </div>
-                        <div v-else-if="isFlying">
-                            Flugpfad von DB Cooper.
+                        <div class="info-area">
+                            <div v-if="isLanding">
+                                <p>Die Zone, wo DB Cooper höchstwahrscheinlich gelandet ist.</p>
+                            </div>
+                            <div v-else-if="isFlying">
+                            <p>Flugpfad von DB Cooper.</p>
                         </div>
                         <div v-else-if="isFinding">
-                            Money found.
+                            <p>Money found.</p>
                         </div>
                         <div v-else>
-                            Klicke eine Fläche an, um sie zu erkunden.
+                            <p> Klicke eine Fläche an, um sie zu erkunden.</p>
                         </div>
                     </div>
                 </div>
-            
-            
-        </section>
-    </div>
-</template>
+                </div>
+            </section>
+        </div>
+    </template>
 
 
 <style lang="scss" >
@@ -65,14 +69,15 @@ section.search{
     background-color: $background;
     .map{
         position: relative;
-        width: fit-content;
-        height: 100vh;
+        width: 60%;
+        //height: 100vh;
+        
 
         #map{
         width: 100%;
         height: 100%;
         filter: grayscale(1) invert(1) sepia(0.2);
-
+        border-radius: 8px;
         
         }
     
@@ -87,6 +92,10 @@ section.search{
                 fill: $beige;
                 opacity: 0.7;
                 cursor: pointer;
+
+                &.selected{
+                    fill: $hover-select !important;
+                }
             }
             .cls-4{stroke-dasharray:0 0 12.2 12.2;}
             .cls-4,.cls-5{
@@ -96,6 +105,9 @@ section.search{
                 stroke-miterlimit:10;
                 stroke-width:3px;
                 cursor: pointer;
+                &.selected{
+                    stroke: $hover-select !important;
+                }
             }
 
             &:hover + #map{
@@ -114,7 +126,7 @@ section.search{
                
                 stroke:$bright;
 
-                &:hover{
+                &:hover, &:focus{
                     stroke: $hover-select;
                 }
             }
@@ -123,13 +135,25 @@ section.search{
 
     .grid{
         display: flex;
-        justify-content: space-between;
+        gap: 15px;
         align-items: top;
     }
 
     .info-area{
-        width: 30%;
-        border: 3px solid red;
+        // height: 100%;
+        width: 40%;
+        background: linear-gradient(rgb(37, 37, 41) 0%, rgb(59, 59, 67) 100%);
+        border: rgb(55, 55, 58) solid 1px;
+       
+        border-radius: 8px;
+        backface-visibility: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: top;
+        // padding: 20px;
+        align-items: center;
+       
+
     }
 
 }

@@ -29,8 +29,6 @@ window.addEventListener('scroll', () => {
 
     if(position.bottom >= 0 && position.top <= window.innerHeight){
         ticket.style.transform = `translateY(-${window.pageYOffset * 0.15}px)`;
-    }else{
-        console.log("not visible");
     }
     
 });
