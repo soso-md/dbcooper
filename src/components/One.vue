@@ -75,7 +75,7 @@ window.addEventListener('scroll', () => {
                     <div class="container">
 
                         <div class="ticket">
-                            <img src="../assets/img/ticket.png" alt="">
+                            <img src="../assets/img/ticket-removebg-preview.png" alt="">
                         </div>
                         
                         <div class="grid">
