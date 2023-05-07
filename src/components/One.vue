@@ -11,7 +11,7 @@ onMounted(() => {
         container: '#waveform',
         mediaControls: true
     });
-    wavesurfer.load('../assets/audio/shaffner_1.mp3');
+    wavesurfer.load('/src/assets/audio/shaffner_1.mp3');
 });
 
 function playInterview(){
