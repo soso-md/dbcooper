@@ -45,7 +45,6 @@
 <style lang="scss">
 
 section#intro{
-    background: red;
     height: 450px;
     //background: linear-gradient(0deg, rgba(29,29,29,1) 80%, rgba(3,6,8,1) 100%);
     z-index: 90;

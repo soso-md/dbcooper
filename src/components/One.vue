@@ -28,7 +28,7 @@ window.addEventListener('scroll', () => {
     const position = ticket.getBoundingClientRect();
 
     if(position.bottom >= 0 && position.top <= window.innerHeight){
-        ticket.style.transform = `translateY(-${window.pageYOffset * 0.15}px)`;
+        ticket.style.transform = `translateY(-${window.pageYOffset * 0.17}px)`;
     }
     
 });
@@ -148,7 +148,7 @@ window.addEventListener('scroll', () => {
 
     .ticket img{
         position: relative;
-        top: 80px;
+        top: 450px;
         -webkit-filter: drop-shadow(5px 5px 5px #222);
         filter: drop-shadow(5px 5px 5px #222);
     }

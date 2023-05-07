@@ -27,12 +27,12 @@ function toggleFinding(){
 
 <template>
     <div>
-        <section class="search">
+        <section class="search background-c1">
             <div class="container">
 
-                <h1>Die Suche</h1>
+                <h1 v-motion-fade-up >Die Suche</h1>
+                <p  v-motion-fade-up style="margin: 0 auto; text-align: center; padding-bottom: 50px;">Nach der Entführung von Northwest Orient Airlines Flug 305 startete das FBI eine der größten Fahndungen in der US-Geschichte, um den Entführer namens DB Cooper zu fassen. Die Suche, an der Hunderte von Agenten beteiligt waren, dauerte Jahre, konnte aber letztendlich nicht die Identität oder den Aufenthaltsort von Cooper aufdecken. Trotz des mangelnden Fortschritts in der Untersuchung ist die Suche nach DB Cooper zu einem der faszinierendsten und anhaltendsten Mysterien in der amerikanischen Geschichte geworden.</p>
                 <div class="grid">
-                    
                     <div class="map">
                         <svg id="marker" xmlns="http://www.w3.org/2000/svg" width="603" height="633" viewBox="0 0 603 633">
                             <line @click="toggleFlying()" :class="{selected: isFlying}" class="cls-5" x1="236.8" x2="238.2" y2="5.8"/>
@@ -45,13 +45,17 @@ function toggleFinding(){
                         </div>
                         <div class="info-area">
                             <div v-if="isLanding">
-                                <p>Die Zone, wo DB Cooper höchstwahrscheinlich gelandet ist.</p>
+                                <h3> Coopers vermuteter Landeort</h3>
+                                <p>Coopers Aufenthaltsort nach dem Sprung aus dem Flugzeug bleibt ein Rätsel. Allerdings haben mehrere Hinweise die Ermittler dazu veranlasst, zu glauben, dass er irgendwo in den dichten Wäldern des südwestlichen Bundesstaates Washington gelandet ist. Eine Reihe von Luft-, Boden- und Zeugenbefragungen haben am Abend des Fluges verdächtige Aktivitäten und einen Fallschirmspringer in diesem Gebiet gemeldet.</p>
                             </div>
                             <div v-else-if="isFlying">
-                            <p>Flugpfad von DB Cooper.</p>
+                                <h3>Die Flugroute</h3>
+                            <p>Die Flugroute von Northwest Orient Airlines Flug 305 führte von Portland, Oregon, nach Seattle, Washington. Cooper stieg in Portland in den Flug ein, und die Entführung fand kurz nach dem Start statt. Das Flugzeug wurde dann nach Seattle umgeleitet, wo die Forderungen des Entführers erfüllt wurden, bevor es wieder abhob. Die Flugroute endete schließlich in Reno, Nevada, wo Cooper vermutlich mit seinem Lösegeld aus dem Flugzeug gesprungen ist.</p>
                         </div>
                         <div v-else-if="isFinding">
-                            <p>Money found.</p>
+                            <h3>Gefundenes Geld</h3>
+                            <p>Im Jahr 1980 entdeckte ein Junge, der in der Nähe des Columbia River im Bundesstaat Washington spielte, ein Bündel Geld, das später als Teil von Coopers Lösegeld bestätigt wurde. Das Geld wurde in der Nähe von Vancouver, Washington, am Flussufer gefunden, etwa 20 Meilen von der vermuteten Landezone entfernt. Die Entdeckung löste ein erneutes Interesse am Fall DB Cooper aus und führte zu weiteren Suchaktionen in der Gegend.</p>
+                            <img src="src/assets/img/moneyFound.jpeg" alt="">
                         </div>
                         <div v-else>
                             <p> Klicke eine Fläche an, um sie zu erkunden.</p>
@@ -65,8 +69,12 @@ function toggleFinding(){
 
 
 <style lang="scss" >
+section.background-c1{
+        background: linear-gradient(180deg, $background 0%, $background-grey 100%);
+    }
 section.search{
-    background-color: $background;
+    padding-bottom: 70px;
+    // background-color: $background;
     .map{
         position: relative;
         width: 60%;
@@ -144,7 +152,8 @@ section.search{
         width: 40%;
         background: linear-gradient(rgb(37, 37, 41) 0%, rgb(59, 59, 67) 100%);
         border: rgb(55, 55, 58) solid 1px;
-       
+        max-height: 750px;
+        overflow: scroll;
         border-radius: 8px;
         backface-visibility: hidden;
         display: flex;
@@ -153,6 +162,19 @@ section.search{
         // padding: 20px;
         align-items: center;
        
+        div{
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            
+
+            img{
+                width: 95%;
+                padding-bottom: 10px;
+            }
+        }
 
     }
 
