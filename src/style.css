@@ -1,14 +1,14 @@
 @font-face {
   font-family:'Burford';
-  src: local('../assets/font/Burford_Line.otf')
+  src: url('../assets/font/Burford_Line.otf') format('opentype');
 }
 @font-face {
   font-family:'Playfair Display';
-  src: local('../assets/font/PlayfairDisplay-VariableFont_wght.ttf')
+  src: url('../assets/font/PlayfairDisplay-VariableFont_wght.ttf') format('truetype');
 }
 @font-face {
   font-family:'ShadowsIntoLight';
-  src: local('../assets/font/ShadowsIntoLight-Regular.ttf')
+  src: url('../assets/font/ShadowsIntoLight-Regular.ttf') format('truetype');;
 }
 
 *{
