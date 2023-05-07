@@ -11,16 +11,16 @@ onMounted(() => {
         container: '#waveform',
         mediaControls: true
     });
-    wavesurfer.load('../assets/audio/shaffner_1.mp3');
+    wavesurfer.load('src/assets/audio/shaffner_1.mp3');
 });
 
 function playInterview(){
-    this.wavesurfer.play();
-    this.isPlaying = true;
+    wavesurfer.play();
+    isPlaying.value = true;
 }
 function pauseInterview(){
-    this.wavesurfer.pause();
-    this.isPlaying = false;
+    wavesurfer.pause();
+    isPlaying.value = false;
 }
 
 window.addEventListener('scroll', () => {
