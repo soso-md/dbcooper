@@ -1,3 +1,16 @@
+@font-face {
+  font-family:'Burford';
+  src: local('../assets/font/Burford_Line.otf')
+}
+@font-face {
+  font-family:'Playfair Display';
+  src: local('../assets/font/PlayfairDisplay-VariableFont_wght.ttf')
+}
+@font-face {
+  font-family:'ShadowsIntoLight';
+  src: local('../assets/font/ShadowsIntoLight-Regular.ttf')
+}
+
 *{
   margin: 0;
 }
@@ -39,10 +52,8 @@ h1{
   line-height: 85%;
   text-align: center;
   margin-bottom: 50px;
-    font-family: 'Playfair Display', sans-serif;
-    font-family: 'Bodoni 72', sans-serif;
-    /* font-family: 'Gilroy', sans-serif; */
-  /* font-family: 'Skyline', sans-serif; */
+  font-family: 'Playfair Display', sans-serif;
+
 }
 
 h2{
