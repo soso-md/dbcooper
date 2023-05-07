@@ -55,7 +55,7 @@ function toggleFinding(){
                         <div v-else-if="isFinding">
                             <h3>Gefundenes Geld</h3>
                             <p>Im Jahr 1980 entdeckte ein Junge, der in der Nähe des Columbia River im Bundesstaat Washington spielte, ein Bündel Geld, das später als Teil von Coopers Lösegeld bestätigt wurde. Das Geld wurde in der Nähe von Vancouver, Washington, am Flussufer gefunden, etwa 20 Meilen von der vermuteten Landezone entfernt. Die Entdeckung löste ein erneutes Interesse am Fall DB Cooper aus und führte zu weiteren Suchaktionen in der Gegend.</p>
-                            <img src="src/assets/img/moneyFound.jpeg" alt="">
+                            <img src="../assets/img/moneyFound.jpeg" alt="">
                         </div>
                         <div v-else>
                             <p> Klicke eine Fläche an, um sie zu erkunden.</p>

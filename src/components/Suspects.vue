@@ -116,7 +116,7 @@ function showMessage(event) {
     <div class="meme-container">
 
         <div v-motion-fade-up id="meme" v-if="showMeme" class="meme container" style="display: flex; justify-content: center;  padding: 140px;">
-            <img src="../../src/assets/img/meme.jpeg" alt="">
+            <img src="../assets/img/meme.jpeg" alt="">
         </div>
     </div>
 </div>

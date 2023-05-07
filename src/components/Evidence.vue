@@ -15,7 +15,7 @@
             <p  v-motion-fade-up>Seit der spektakulären Flugzeugentführung von DB Cooper im Jahr 1971 ranken sich zahlreiche Theorien um sein Schicksal. Trotz jahrzehntelanger Ermittlungen und einer der größten Fahndungen in der amerikanischen Geschichte konnte seine Identität nie zweifelsfrei geklärt werden und auch sein Verbleib bleibt bis heute ein Rätsel. Die Faszination für den Entführer und sein Schicksal hat im Laufe der Jahre viele Amateurdetektive und Experten inspiriert, um zahlreiche Theorien zu entwickeln, die von plausibel bis hin zu absurd reichen</p>
             <div v-motion-fade-up class="theory" style="z-index: 20">
                 <div class="person">
-                    <img src="../../src/assets/img/theories/Himmelsbach.jpeg" alt="Himmelsbach">
+                    <img src="../assets/img/theories/Himmelsbach.jpeg" alt="Himmelsbach">
                     <h2>Ralph Himmelsbach, 1971</h2>
                     <p>war ein ehemaliger FBI-Agent, der an der Untersuchung des Falls beteiligt war.</p>
                 </div>
@@ -29,7 +29,7 @@
                     <p>"Meine Theorie ist, dass er im Fluss gelandet ist und nie wieder gesehen wurde. Ich denke nicht, dass er überlebt hat.""</p>
                 </div>
                 <div class="person">
-                    <img src="../../src/assets/img/theories/König.jpeg" alt="König">
+                    <img src="../assets/img/theories/König.jpeg" alt="König">
                     <h2>Joe Koenig, 1972</h2>
                     <p>ehemaliger FBI-Agent.</p>
                 </div>
@@ -37,7 +37,7 @@
 
             <div v-motion-fade-up class="theory" style="z-index: 18">
                     <div class="person">
-                        <img src="../../src/assets/img/theories/Carlson.jpeg" alt="Ron Carlson">
+                        <img src="../assets/img/theories/Carlson.jpeg" alt="Ron Carlson">
                         <h2>Ron Carlson, 1979</h2>
                         <p>pensionierter FBI-Agent, der Cooper für einen Geheimdienst Mitarbeiter hält.</p>
                     </div>
@@ -51,7 +51,7 @@
                     <p>""Ich glaube, dass Cooper wahrscheinlich überlebt hat, weil er ein erfahrener Fallschirmspringer war und sich sorgfältig vorbereitet hat. Meiner Meinung nach könnte er sich irgendwo in der Nähe des Luftraums versteckt haben, den er verlassen hat, und möglicherweise eine Hütte oder eine abgelegene Gegend erreicht haben, um zu überleben."</p>
                 </div>
                 <div class="person">
-                    <img src="../../src/assets/img/theories/Blevins.jpeg" alt="Robert Blevins">
+                    <img src="../assets/img/theories/Blevins.jpeg" alt="Robert Blevins">
                     <h2>Robert Blevins, 2011</h2>
                     <p>unabhängiger Ermittler, der seit Jahren Nachforschungen im DB Cooper-Fall anstellt</p>
                 </div>
@@ -59,7 +59,7 @@
 
             <div v-motion-fade-up class="theory" style="z-index: 16">
                     <div class="person">
-                        <img src="../../src/assets/img/theories/Smith.jpeg" alt="Bruce Smith">
+                        <img src="../assets/img/theories/Smith.jpeg" alt="Bruce Smith">
                         <h2>Bruce Smith, 2016</h2>
                         <p>hat in seinem Buch "DB Cooper and the FBI - A Case Study of America's Only Unsolved Skyjacking" seine Erkenntnisse und Einschätzungen zusammengefasst</p>
                     </div>
