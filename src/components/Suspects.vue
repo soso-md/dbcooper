@@ -44,7 +44,7 @@ function showMessage(event) {
             <p v-motion-fade-up>Die Suche nach dem mysteriösen 'DB Cooper' ist seit Jahrzehnten ein Rätsel, das viele Menschen fasziniert. In den Jahren seit dem Vorfall sind viele Verdächtige ins Spiel gekommen, aber die Identität von DB Cooper bleibt bis heute unbekannt. Schau dir die Verdächtigen unten an und triff deine eigene Entscheidung, wer hinter einer der berühmtesten Kriminalfälle der Geschichte steckt.</p>
             <div class="grid">
             
-                <div v-motion-fade-up style="width: 30%;" class="card-container">
+                <div v-motion-fade-up style="width: 31%; min-width: 350px;" class="card-container">
                     <div class="card" @click="showMessage($event)">
                         <div class="front">
                             <img src="../assets/img/suspects/McCoy.jpeg" alt="">
@@ -57,7 +57,7 @@ function showMessage(event) {
                     </div>
                 </div>
 
-                <div v-motion-fade-up style="width: 30%;" class="card-container">
+                <div v-motion-fade-up style="width: 31%; min-width: 350px;" class="card-container">
                     <div class="card" @click="showMessage($event)">
                         <div class="front">
                             <img src="../assets/img/suspects/Christiansen.jpeg" alt="Kenneth Christiansen">
@@ -70,7 +70,7 @@ function showMessage(event) {
                     </div>
                 </div>
 
-                <div v-motion-fade-up style="width: 30%;" class="card-container">
+                <div v-motion-fade-up style="width: 31%; min-width: 350px;" class="card-container">
                     <div class="card" @click="showMessage($event)">
                         <div class="front">
                             <img src="../assets/img/suspects/Rackstraw.avif" alt="Robert Rackstraw">
@@ -83,7 +83,7 @@ function showMessage(event) {
                     </div>
                 </div>
 
-                <div v-motion-fade-up style="width: 30%;" class="card-container">
+                <div v-motion-fade-up style="width: 31%; min-width: 350px;" class="card-container">
                     <div class="card" @click="showMessage($event)">
                         <div class="front">
                             <img src="../assets/img/suspects/Weber.jpeg" alt="Duane Weber">
@@ -96,7 +96,7 @@ function showMessage(event) {
                     </div>
                 </div>
                 
-                <div v-motion-fade-up style="width: 30%;" class="card-container">
+                <div v-motion-fade-up style="width: 31%; min-width: 350px;" class="card-container">
                     <div class="card" @click="showMessage($event)">
                         <div class="front">
                             <img src="../assets/img/suspects/List.jpeg" alt="John List">
