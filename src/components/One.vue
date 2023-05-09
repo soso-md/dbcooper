@@ -11,7 +11,7 @@ onMounted(() => {
         container: '#waveform',
         mediaControls: true
     });
-    wavesurfer.load('/src/assets/audio/shaffner_1.mp3');
+    wavesurfer.load('https://res.cloudinary.com/dzl2wtbu2/video/upload/v1683615276/shaffner_1_rgxeei.mp3');
 });
 
 function playInterview(){
@@ -43,7 +43,7 @@ window.addEventListener('scroll', () => {
                         <h1 v-motion-fade-up >Der Fall</h1>
                         <video src="../assets/video/One1.mp4" controls></video>
                         <div  class="grid">
-                            <p v-motion-fade-up style="width: 50%;">Ein weißer Mann in den 40ern mit schwarzen Haaren und zurückweichender Haarlinie, der eine Sonnenbrille und einen Anzug trug, kaufte ein Einwegticket als Dan Cooper. Er hatte einen Aktenkoffer und eine braune Papiertüte dabei. Das Flugzeug hob mit ihm und 36 weiteren Passagieren um 14:50 Uhr ab.</p>
+                            <p v-motion-fade-up style="width: 50%;">Ein weißer Mann in den 40ern mit schwarzen Haaren und zurückweichender Haarlinie, der eine Sonnenbrille und einen Anzug trug, kaufte ein One-Way-Ticket als Dan Cooper. Er hatte einen Aktenkoffer und eine braune Papiertüte dabei. Das Flugzeug hob mit ihm und 36 weiteren Passagieren um 14:50 Uhr ab.</p>
                             <div style="width: 20%;" class="card-container">
                                 <div class="card">
                                     <div class="front">

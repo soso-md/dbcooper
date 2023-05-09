@@ -12,7 +12,7 @@
        
         <h1  v-motion-fade-up>Die Theorien</h1>
         <div class="theories container">
-            <p  v-motion-fade-up>Seit der spektakulären Flugzeugentführung von DB Cooper im Jahr 1971 ranken sich zahlreiche Theorien um sein Schicksal. Trotz jahrzehntelanger Ermittlungen und einer der größten Fahndungen in der amerikanischen Geschichte konnte seine Identität nie zweifelsfrei geklärt werden und auch sein Verbleib bleibt bis heute ein Rätsel. Die Faszination für den Entführer und sein Schicksal hat im Laufe der Jahre viele Amateurdetektive und Experten inspiriert, um zahlreiche Theorien zu entwickeln, die von plausibel bis hin zu absurd reichen</p>
+            <p  v-motion-fade-up>Seit der spektakulären Flugzeugentführung von DB Cooper im Jahr 1971 ranken sich zahlreiche Theorien um sein Schicksal. Trotz jahrzehntelanger Ermittlungen und einer der größten Fahndungen in der amerikanischen Geschichte konnte seine Identität nie zweifelsfrei geklärt werden und auch sein Aufenthaltsort bleibt bis heute ein Rätsel. Die Faszination für den Entführer und sein Schicksal hat im Laufe der Jahre viele Amateurdetektive und Experten inspiriert, um zahlreiche Theorien zu entwickeln, die von plausibel bis hin zu absurd reichen</p>
             <div v-motion-fade-up class="theory" style="z-index: 20">
                 <div class="person">
                     <img src="../assets/img/theories/Himmelsbach.jpeg" alt="Himmelsbach">
